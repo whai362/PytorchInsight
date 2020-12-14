@@ -1,0 +1,1 @@
+python -m torch.distributed.launch --nproc_per_node=1 imagenet_fast.py -a recnet50 --data ../data/imagenet1k/ --epochs 100 --schedule 30 60 90 --wd 1e-4 --gamma 0.1 -c checkpoints/imagenet/recnet50 --opt-level O0 --wd-all --label-smoothing 0. --warmup 0 --train-batch 1
